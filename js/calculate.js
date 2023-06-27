@@ -2,6 +2,7 @@ var hp;
 
 hp = 4
 
+// 2項演算
 hp = hp + 5
 console.log(hp)
 
@@ -14,6 +15,7 @@ console.log(hp)
 hp = hp / 3
 console.log(hp)
 
+// 単項演算
 console.log("--- unary operation --")
 hp = 5
 hp++
@@ -43,7 +45,9 @@ console.log(message)
 message = monster_name + "のHPは" + hp
 console.log(message)
 
-var isTrue;
+// 論理演算（logical operation）
+console.log("--- logical operation ---")
+var isBool;
 
 hp = 10;
 isBool = (hp == 20)
@@ -61,6 +65,7 @@ hp = 15;
 isBool = (hp >= 10)
 console.log(isBool)
 
+// ３項演算(ternary operation)
 console.log("----ternary operation---")
 hp = 10
 var result = (hp <= 20) ? "ピンチ！" : "大丈夫";
