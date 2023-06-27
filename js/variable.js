@@ -20,3 +20,9 @@ console.log("Avg:" + average)
 console.log("Speed" + speed)
 console.log("isActive:" + isActive)
 
+const TAX_RATE = 0.1
+
+const TOKYO = "東京"
+
+console.log(TAX_RATE)
+console.log(TOKYO)
