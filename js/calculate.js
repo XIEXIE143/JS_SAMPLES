@@ -23,6 +23,7 @@ hp = 5
 hp--
 console.log(hp)
 
+// 複合演算
 console.log("--- compound operation --")
 hp = 5
 hp += 3
@@ -32,6 +33,7 @@ hp = 5
 hp -= 3
 console.log(hp)
 
+// 文字と連結（れんけつ）
 hp = 10
 
 var monster_name = "スライム"
