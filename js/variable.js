@@ -19,3 +19,4 @@ console.log(amount, price, discount)
 console.log("Avg:" + average)
 console.log("Speed" + speed)
 console.log("isActive:" + isActive)
+
