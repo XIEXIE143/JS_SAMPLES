@@ -71,3 +71,11 @@ hp = 10
 var result = (hp <= 20) ? "ピンチ！" : "大丈夫";
 console.log("HP:" + hp)
 console.log(result)
+
+
+var hp = 10;
+hp += 5;
+hp -= 1;
+hp *= 2;
+hp /= 4;
+console.log(hp);
