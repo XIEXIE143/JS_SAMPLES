@@ -1,6 +1,6 @@
 function inputUserName() {
     console.log("change!!")
-    // user_name 取得（しゅとく）
+    // user_name 取得
     var user_name = userNameElement.value
     console.log(user_name)
     var message = "Welcome, " + user_name
