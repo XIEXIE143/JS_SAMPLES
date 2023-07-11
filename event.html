@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Bootstrap5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -15,7 +16,22 @@
 
         <h2>User Name</h2>
         <input id="user_name" class="form-control" type="text" onchange="inputUserName()">
-        <p id="message"><!-- inner --></p>
+        <p id="message" class="p-3"><!-- inner --></p>
+
+        <h2>Item List</h2>
+        <dl>
+            <dt>Name</dt>
+            <dd id="item_name">Coffee</dd>
+            <dt>Price</dt>
+            <dd id="price">350</dd>
+            <dt>Quantity</dt>
+            <dd class="w-25">
+                <input id="quantity" class="form-control" type="number" min="0" max="10">
+            </dd>
+        </dl>
+        <!-- Shift + Ctrl + R -->
+        <!-- Shift + Cmd + R -->
+        <button onclick="order()" class="btn btn-primary">Order</button>
 
         <script src="js/event.js"></script>
     </div>
