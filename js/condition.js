@@ -27,6 +27,7 @@ document.getElementById("today").innerHTML = dateString
 var weekIndex = date.getDay()
 document.getElementById("week_index").innerHTML = weekIndex
 
+// var weekOfDays = [Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 var weekOfDays = ["日", "月", "火", "水", "木", "金", "土"]
 var weekday = weekOfDays[weekIndex]
 var garbage = ""
