@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>くじびき</title>
+    <script>
+        var rarities = [
+            { type: "N", name: "Normal", probability: 70 },
+            { type: "R", name: "Rare", probability: 20 },
+            { type: "SR", name: "Super Rare", probability: 6 },
+            { type: "SSR", name: "Super Special Rare", probability: 3 },
+            { type: "LR", name: "Legend", probability: 1 },
+        ];
+
+        function drawLottery() {
+            // 0 - 1 のランダムな小数を使って、0 - 100の数字をつくる
+            var randomNumber = Math.random() * 100;
+            var cumulativeProbability = 0;
+
+            // レアリティの数だけ、repeat（くりかえし）
+            for (var i = 0; i < rarities.length; i++) {
+                //　確率（Probability）をプラスしていく
+                // 70 -> 90 -> 96 -> 99 -> 100
+                cumulativeProbability += rarities[i].probability;
+                // ランダムな数字と比較
+                if (randomNumber < cumulativeProbability) {
+                    //idがresultのElement（HTMLタグ）をとってくる
+                    var resultElement = document.getElementById("result");
+                    //それに、現在のレアリティを表示
+                    resultElement.innerHTML = "Type: " + rarities[i].type + "<br>Name: " + rarities[i].name;
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>くじびき</h1>
+    <button onclick="drawLottery()">くじを引く</button>
+    <div id="result"></div>
+</body>
+
+</html>
