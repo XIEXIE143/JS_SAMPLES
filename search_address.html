@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search address</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+        <div class="mb-3">
+            <label class="form-label">郵便番号</label>
+            <div class="input-group w-25">
+                <input id="zipcode" class="form-control" type="text" name="zipcode">
+                <button class="btn btn-sm btn-secondary" onclick="searchHandler()">検索</button>
+            </div>
+        </div>
+
+        <h2 class="mt-3">住所検索</h2>
+        <div class="mb-3">
+            <label class="form-label" for="">都道府県</label>
+            <select id="prefecture" class="form-control w-25" name="prefecture">
+                <option value="">--- 都道府県 ---</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="">市区町村</label>
+            <input id="city" class="form-control" type="text" name="address2">
+        </div>
+
+    </main>
+
+    <script src="js/search_address.js"></script>
+</body>
+
+</html>
