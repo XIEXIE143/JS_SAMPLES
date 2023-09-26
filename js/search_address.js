@@ -6,7 +6,6 @@ function getApiURL() {
 }
 
 const API_URL = getApiURL() + 'data/prefectures.json'
-console.log(API_URL)
 
 const loadPrefectures = async () => {
     const response = await fetch(API_URL)
@@ -30,11 +29,20 @@ const searchAPI = async (zipcode) => {
     const query_param = new URLSearchParams({ zipcode: zipcode, })
     const uri = SEARCH_URI + "?" + query_param;
     console.log(uri);
+    const response = await fetch(uri)
+    const data = await response.json()
+    console.log(data)
+    return data;
 }
 
 const searchHandler = async () => {
     const zipcode = document.getElementById('zipcode').value;
     var data = await searchAPI(zipcode);
+
+    var results = data.results[0]
+    document.getElementById('prefecture').value = results.prefcode
+    document.getElementById('city').value = results.address2 + results.address3
 }
 
+// 都道府県読み込み処理
 loadPrefectures()
